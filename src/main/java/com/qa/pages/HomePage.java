@@ -17,13 +17,16 @@ public class HomePage extends BaseClass {
 	
 	@FindBy(xpath="(//a[text()=' Sell Your Car'])[1]")
 	WebElement sellYorCarLink;
+	
+	@FindBy(xpath="//a[text()=' Sell Your Car']")
+	WebElement sellYouCarAdd;
 
 	public HomePage() 
 	{
 		PageFactory.initElements(driver, this);
 	}
 
-	public String validateLoginPageTitle() 
+	public String validateHomePageTitle() 
 	{
 		return driver.getTitle();
 	}
@@ -33,5 +36,8 @@ public class HomePage extends BaseClass {
 		sellYorCarLink.click();
 	}
 
-	
+	public void clickSellYourCarAdd() 
+	{
+		sellYouCarAdd.click();
+	}
 }

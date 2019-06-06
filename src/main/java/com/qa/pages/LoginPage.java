@@ -50,4 +50,14 @@ import com.qa.base.BaseClass;
 	    	
 	return new HomePage();
 }
+   
+   public AddCarPage loginForAddCar(String emid, String pwd){
+		emailId.clear();
+		emailId.sendKeys(emid);
+		password.clear();
+		password.sendKeys(pwd);
+		loginBtn.click();
+		    	
+		return new AddCarPage();
+	}
 }
