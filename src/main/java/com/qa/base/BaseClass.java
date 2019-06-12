@@ -44,6 +44,7 @@ public class BaseClass {
 			driver=new ChromeDriver();
 			
 			
+			
 			e_driver = new EventFiringWebDriver(driver);
 			// Now create object of EventListerHandler to register it with EventFiringWebDriver
 			eventListener = new WebEventListener();

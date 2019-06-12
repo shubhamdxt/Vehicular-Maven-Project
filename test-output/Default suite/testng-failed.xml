@@ -6,7 +6,6 @@
       <class name="com.qa.tests.AddCarTest">
         <methods>
           <include name="verifyEnterAdvName"/>
-          <include name="verifySelctTrim"/>
           <include name="verifyEnterSelling"/>
           <include name="verifyTransmission"/>
           <include name="setUP"/>

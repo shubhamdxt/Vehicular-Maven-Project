@@ -27,13 +27,13 @@ import com.qa.base.BaseClass;
 	@FindBy(xpath="(//select[@class='BMApi'])[3]")
 	WebElement selectTrim;
 	 
-	@FindBy(xpath="(//input[@class='form-control parsley-error'])[1]")
+	@FindBy(xpath="(//input[@class='form-control' and  @name='product_name'])[1]")
 	WebElement enterAdvName;
 	
-	@FindBy(xpath="(//input[@class='form-control parsley-error'])[2]")
+	@FindBy(xpath="(//input[@class='form-control' or @name='selling_price'])[2]")
 	WebElement enterSellingPrice;
 	
-	@FindBy(xpath="(//select[@class='parsley-error'])")
+	@FindBy(xpath="(//select[@name='filter_transmission_id' and @id='filter_transmission_id'])")
 	WebElement selectTransmission;
 	
 	@FindBy(xpath="//button[text()='Proceed']")
@@ -90,14 +90,16 @@ import com.qa.base.BaseClass;
 	 public void selectTrim() 
 	 {
 		Select selectCat=new Select(selectTrim) ;
-		selectCat.selectByVisibleText("Spider Pininfarina");
+		selectCat.selectByVisibleText("GT Coupe");
 		
 	 }
 	 public void enterAdvName() {
+		 enterAdvName.clear();
 		 enterAdvName.sendKeys("my adv");
 	 }
 	 
 	 public void enterSellingPrice() {
+		 enterSellingPrice.clear();
 		 enterSellingPrice.sendKeys("200");
 	 }
 	 
@@ -107,5 +109,11 @@ import com.qa.base.BaseClass;
 		selectCat.selectByVisibleText("Automatic");
 		
 
+	 }
+	 public NewCarsPages clickProceedBtn() {
+		 
+		 proceedBtn.click();
+		 
+		 return new NewCarsPages();
 	 }
 }

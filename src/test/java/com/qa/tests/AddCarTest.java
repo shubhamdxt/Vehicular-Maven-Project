@@ -1,6 +1,9 @@
 package com.qa.tests;
 
+import org.openqa.selenium.JavascriptExecutor;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -28,8 +31,8 @@ public class AddCarTest extends BaseClass{
 		addCarPage=new AddCarPage();
 	 }
     
-    
-    @Test(priority=1 )
+   
+/*    @Test(priority=1 )
     public void verifySelctCategory() throws Exception 
     {
     	homePage.clickSellYourCarLink();
@@ -96,8 +99,8 @@ public class AddCarTest extends BaseClass{
         addCarPage.selectMake();
         Thread.sleep(2000);
     }
-    
-    @Test(priority=5 )
+    */
+    /*@Test(priority=5 )
     public void verifySelctModel() throws Exception 
     {
     	homePage.clickSellYourCarLink();
@@ -115,7 +118,10 @@ public class AddCarTest extends BaseClass{
         addCarPage.selectMake();
         Thread.sleep(2000);
         addCarPage.selectModel();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
+        
+        JavascriptExecutor jse = (JavascriptExecutor)driver;
+        jse.executeScript("window.scrollBy(0,500)");
     }
     
     
@@ -214,16 +220,47 @@ public class AddCarTest extends BaseClass{
         addCarPage.selectModel();
         Thread.sleep(2000);
         addCarPage.selectTrim();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         addCarPage.enterAdvName();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         addCarPage.enterSellingPrice();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         addCarPage.selectTransmission();
+    }*/
+    
+    @Test(priority=10 )
+    public void verifyProceedBtn() throws Exception 
+    {
+    	homePage.clickSellYourCarLink();
+    	Thread.sleep(2000);
+    	addCarPage=loginPage.loginForAddCar(prop.getProperty("emailId"), prop.getProperty("password"));
+     	Thread.sleep(2000);
+     	homePage.clickSellYourCarAdd();
+     	Thread.sleep(2000);
+     	addCarPage.selectCategory();
+     	Thread.sleep(2000);
+     	addCarPage.selectFuel();;
+    	Thread.sleep(2000);
+        addCarPage.selectYear();
+        Thread.sleep(2000);
+        addCarPage.selectMake();
+        Thread.sleep(2000);
+        addCarPage.selectModel();
+        Thread.sleep(2000);
+        addCarPage.selectTrim();
+        Thread.sleep(3000);
+        addCarPage.enterAdvName();
+        Thread.sleep(3000);
+        addCarPage.enterSellingPrice();
+        Thread.sleep(3000);
+        addCarPage.selectTransmission();
+        Thread.sleep(3000);
+        addCarPage.clickProceedBtn();
     }
+    
     @AfterMethod
 	   public void tearDown()
- {
+     {
 		driver.quit();
-	}   
+	 }  
 }
