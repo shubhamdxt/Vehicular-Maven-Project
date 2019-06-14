@@ -110,10 +110,10 @@ import com.qa.base.BaseClass;
 		
 
 	 }
-	 public NewCarsPages clickProceedBtn() {
+	 public AddCarDetailPage clickProceedBtn() {
 		 
 		 proceedBtn.click();
 		 
-		 return new NewCarsPages();
+		 return new AddCarDetailPage();
 	 }
 }

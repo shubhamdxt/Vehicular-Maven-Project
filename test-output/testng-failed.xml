@@ -3,15 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.qa.tests.AddCarTest">
+      <class name="com.qa.tests.DashboardTest">
         <methods>
-          <include name="verifyEnterAdvName"/>
-          <include name="verifyEnterSelling"/>
-          <include name="verifyTransmission"/>
+          <include name="verifyEditBtn"/>
           <include name="setUP"/>
-          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.qa.tests.AddCarTest -->
+      </class> <!-- com.qa.tests.DashboardTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

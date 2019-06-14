@@ -232,11 +232,16 @@ public class AddCarTest extends BaseClass{
     public void verifyProceedBtn() throws Exception 
     {
     	homePage.clickSellYourCarLink();
-    	Thread.sleep(2000);
+    	try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     	addCarPage=loginPage.loginForAddCar(prop.getProperty("emailId"), prop.getProperty("password"));
      	Thread.sleep(2000);
      	homePage.clickSellYourCarAdd();
-     	Thread.sleep(2000);
+        Thread.sleep(2000);
      	addCarPage.selectCategory();
      	Thread.sleep(2000);
      	addCarPage.selectFuel();;
@@ -258,9 +263,9 @@ public class AddCarTest extends BaseClass{
         addCarPage.clickProceedBtn();
     }
     
-    @AfterMethod
+   /* @AfterMethod
 	   public void tearDown()
      {
 		driver.quit();
-	 }  
+	 }*/  
 }
