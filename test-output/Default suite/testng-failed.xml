@@ -5,8 +5,9 @@
     <classes>
       <class name="com.qa.tests.DashboardTest">
         <methods>
-          <include name="verifyEditBtn"/>
+          <include name="tearDown"/>
           <include name="setUP"/>
+          <include name="verifyNameField"/>
         </methods>
       </class> <!-- com.qa.tests.DashboardTest -->
     </classes>
