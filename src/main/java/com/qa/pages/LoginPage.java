@@ -12,7 +12,7 @@ import com.qa.base.BaseClass;
   @FindBy(xpath="//a[text()='Login']")
    WebElement loginLink;
 
-   @FindBy(xpath="(//input[@name='email'])[2]")
+   @FindBy(xpath="(//input[contains(@name ,'email')])[2]")
    WebElement emailId;
 
    @FindBy(xpath="(//input[@name='password'])[2]")

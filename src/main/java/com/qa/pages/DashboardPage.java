@@ -11,7 +11,10 @@ public class DashboardPage extends BaseClass{
     @FindBy(xpath="//label[contains(text(),'Edit')]")
     WebElement editBtn;
     
-    @FindBy(xpath="//input[@class='form-control' and @name='user_nickname']")
+    @FindBy(xpath="(//input[contains(@name , 'user_nickname')])[1]")
+    
+   // @FindBy(xpath="//*[@id=\"formAccount\"]/div/div[1]/div/div[2]/div[1]/div/div/input")
+  //  @FindBy(xpath="//input[@name='user_reg_number']")
     WebElement nameEditField;
     
     @FindBy(xpath="//button[@class='btn btn-success btn-lg' and text()='Save/Update']")

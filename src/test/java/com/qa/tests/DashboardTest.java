@@ -1,5 +1,9 @@
 package com.qa.tests;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -68,12 +72,17 @@ public class DashboardTest extends BaseClass {
          System.out.println("befohtrhtrtrjr");
     	 addCarDetailPage.clicOnDashboardLink();
     	 Thread.sleep(3000);
-    	 System.out.println("befor");
+    	
     	 dashboardPage.clickOnEditBtn();
-    	 System.out.println("after");
+    	 Thread.sleep(3000);
+    		dashboardPage.nameFieldUpdate();
+      	  Thread.sleep(3000);
+      	  System.out.println("hello");
+     	   dashboardPage.saveAndUpdateBtn();
+     	  System.out.println("after hello");
     }
-  /* 
-     @Test(priority=2)
+  
+/*     @Test(priority=2)
      public void verifyNameField() throws Exception {
     	  	addCarPage=loginPage.loginForAddCar(prop.getProperty("emailId"), prop.getProperty("password"));
           	Thread.sleep(2000);
@@ -101,13 +110,15 @@ public class DashboardTest extends BaseClass {
              Thread.sleep(3000);
         	 addCarDetailPage.clicOnDashboardLink();
         	 Thread.sleep(3000);
-        	dashboardPage.clickOnEditBtn();
-    	 Thread.sleep(3000);
-    	 dashboardPage.nameFieldUpdate();
+        	  	
+        	 dashboardPage.clickOnEditBtn();
+        	 Thread.sleep(3000);
+        	dashboardPage.nameFieldUpdate();
+        	  Thread.sleep(3000);
+       	   dashboardPage.saveAndUpdateBtn(); 
+     }*/
      
-     }
-     
-     @Test(priority=3)
+     /*@Test(priority=3)
      public void verifySaveAndUpdatBtn() throws Exception 
      {
     	  	addCarPage=loginPage.loginForAddCar(prop.getProperty("emailId"), prop.getProperty("password"));
@@ -142,4 +153,10 @@ public class DashboardTest extends BaseClass {
     	   Thread.sleep(3000);
     	   dashboardPage.saveAndUpdateBtn(); 
      }*/
+     
+     @AfterMethod
+	   public void tearDown()
+   {
+		driver.quit();
+	 }
 }
