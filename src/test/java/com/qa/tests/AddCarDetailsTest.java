@@ -11,14 +11,14 @@ import com.qa.pages.AddCarPage;
 import com.qa.pages.HomePage;
 import com.qa.pages.LoginPage;
 
-public class AddCarDetailTest extends BaseClass{
+public class AddCarDetailsTest extends BaseClass{
 	
 	HomePage homePage;
 	LoginPage loginPage;
 	AddCarPage addCarPage;
 	 AddCarDetailPage addCarDetailPage;
 	 
-    public 	AddCarDetailTest() {
+    public 	AddCarDetailsTest() {
     	super();
     }
     

@@ -51,7 +51,22 @@ public class LoginTest extends BaseClass{
     	Thread.sleep(2000);
     	loginPage.clickLoginLink();
     	Thread.sleep(2000);
-    	homePage=loginPage.login(prop.getProperty("emailId"), prop.getProperty("password"));
+    	   try 
+    	   {
+    		if(prop.getProperty("emailId").isEmpty() && prop.getProperty("password").isEmpty())
+    		{
+    			System.out.println("Please Enter email id && password");
+    		}
+    		else {
+    			homePage=loginPage.login(prop.getProperty("emailId"), prop.getProperty("password"));
+			}
+    	
+    	}
+    	catch (Exception e) {
+			// TODO: handle exception
+    		
+    		System.out.println("Emaild not found: " + e.getMessage());
+		}
     	Thread.sleep(2000);
     	Assert.assertEquals(prop.get("url"), driver.getCurrentUrl());
     }

@@ -1,25 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="69082" started-at="2019-06-17T15:20:13Z" finished-at="2019-06-17T15:21:23Z">
+  <suite name="Default suite" duration-ms="60790" started-at="2019-06-28T10:12:13Z" finished-at="2019-06-28T10:13:14Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="69082" started-at="2019-06-17T15:20:13Z" finished-at="2019-06-17T15:21:23Z">
-      <class name="com.qa.tests.DashboardTest">
-        <test-method status="PASS" signature="setUP()[pri:0, instance:com.qa.tests.DashboardTest@66a3ffec]" name="setUP" is-config="true" duration-ms="13414" started-at="2019-06-17T20:50:13Z" finished-at="2019-06-17T20:50:27Z">
+    <test name="Default test" duration-ms="60790" started-at="2019-06-28T10:12:13Z" finished-at="2019-06-28T10:13:14Z">
+      <class name="com.qa.tests.LoginTest">
+        <test-method status="PASS" signature="setUP()[pri:0, instance:com.qa.tests.LoginTest@66a3ffec]" name="setUP" is-config="true" duration-ms="13804" started-at="2019-06-28T15:42:13Z" finished-at="2019-06-28T15:42:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUP -->
-        <test-method status="PASS" signature="verifyEditBtn()[pri:1, instance:com.qa.tests.DashboardTest@66a3ffec]" name="verifyEditBtn" duration-ms="55058" started-at="2019-06-17T20:50:27Z" finished-at="2019-06-17T20:51:22Z">
+        <test-method status="PASS" signature="verifyLoginPageTitle()[pri:1, instance:com.qa.tests.LoginTest@66a3ffec]" name="verifyLoginPageTitle" duration-ms="6" started-at="2019-06-28T15:42:27Z" finished-at="2019-06-28T15:42:27Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyEditBtn -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tests.DashboardTest@66a3ffec]" name="tearDown" is-config="true" duration-ms="593" started-at="2019-06-17T20:51:22Z" finished-at="2019-06-17T20:51:23Z">
+        </test-method> <!-- verifyLoginPageTitle -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tests.LoginTest@66a3ffec]" name="tearDown" is-config="true" duration-ms="611" started-at="2019-06-28T15:42:27Z" finished-at="2019-06-28T15:42:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.qa.tests.DashboardTest -->
+        <test-method status="PASS" signature="setUP()[pri:0, instance:com.qa.tests.LoginTest@66a3ffec]" name="setUP" is-config="true" duration-ms="16593" started-at="2019-06-28T15:42:27Z" finished-at="2019-06-28T15:42:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method status="PASS" signature="verifyLoginLink()[pri:2, instance:com.qa.tests.LoginTest@66a3ffec]" name="verifyLoginLink" duration-ms="4135" started-at="2019-06-28T15:42:44Z" finished-at="2019-06-28T15:42:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginLink -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tests.LoginTest@66a3ffec]" name="tearDown" is-config="true" duration-ms="667" started-at="2019-06-28T15:42:48Z" finished-at="2019-06-28T15:42:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUP()[pri:0, instance:com.qa.tests.LoginTest@66a3ffec]" name="setUP" is-config="true" duration-ms="13497" started-at="2019-06-28T15:42:49Z" finished-at="2019-06-28T15:43:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method status="PASS" signature="verifyLogin()[pri:3, instance:com.qa.tests.LoginTest@66a3ffec]" name="verifyLogin" duration-ms="10808" started-at="2019-06-28T15:43:02Z" finished-at="2019-06-28T15:43:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogin -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tests.LoginTest@66a3ffec]" name="tearDown" is-config="true" duration-ms="642" started-at="2019-06-28T15:43:13Z" finished-at="2019-06-28T15:43:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.qa.tests.LoginTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
